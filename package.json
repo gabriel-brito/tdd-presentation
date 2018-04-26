@@ -1,0 +1,19 @@
+{
+  "name": "tdd-presentation",
+  "version": "1.0.0",
+  "description": "A little presentation about TDD method to Itelios Front-End team",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabriel-brito/tdd-presentation.git"
+  },
+  "author": "Gabriel Santos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabriel-brito/tdd-presentation/issues"
+  },
+  "homepage": "https://github.com/gabriel-brito/tdd-presentation#readme"
+}
