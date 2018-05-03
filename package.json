@@ -4,7 +4,8 @@
   "description": "A little presentation about TDD method to Itelios Front-End team",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha __tests__/**/*.spec.js"
+    "test": "./node_modules/.bin/mocha __tests__/**/*.spec.js --require babel-register",
+    "test:watch": "./node_modules/.bin/mocha __tests__/**/*.spec.js --watch --require babel-register"
   },
   "repository": {
     "type": "git",
