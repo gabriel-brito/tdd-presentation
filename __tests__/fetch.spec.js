@@ -12,10 +12,11 @@ global.fetch = require('node-fetch');
 
 describe('Fetch Pokemon', () => {
   let fetchedStub;
+  let promise;
 
   beforeEach(()=> {
     fetchedStub = sinon.stub(global, 'fetch');
-    
+    promise = fetchedStub.returnsPromise();
   });
 
   afterEach(()=> {
@@ -42,13 +43,27 @@ describe('Fetch Pokemon', () => {
           .calledWith('http://pokeapi.co/api/v2/pokemon/bulbasaur');
       });
 
-
-      // let squirtle = pokemon('squirtle');
-      // expect(fetchedStub).to.have.been
-      //   .calledWith('http://pokeapi.co/api/v2/pokemon/squirtle')
+      context('It should have been called with bulbasaur', ()=>{
+        let squirtle = pokemon('squirtle');
+        expect(fetchedStub).to.have.been
+          .calledWith('http://pokeapi.co/api/v2/pokemon/squirtle');
+      });
     });
 
+    it('should return the JSON Data from the promise', ()=>{
+      promise.resolves({body: 'json'});
 
+      const fetchedPokemon = pokemon('bulbasaur');
+
+      expect(fetchedPokemon.resolveValue).to.be.eql({body: 'json'})
+
+    });
+
+    it('should return an Object from return', ()=> {
+      let bulbasaur = pokemon('bulbasaur');
+
+      expect(bulbasaur).to.be.an('object');
+    });
 
   });
 
