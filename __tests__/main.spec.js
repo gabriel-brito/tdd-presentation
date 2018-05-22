@@ -1,3 +1,20 @@
+// Métodos de teste -- São ótimos para otimizar o tempo de desenvolvimento de acordo com o seu problema
+// --bail para parar no primeiro erro encontrado
+// it.skip() para pular esse teste em especifico
+// it.only() para testar um único caso de teste
+
+//Hooks de teste -- São ótimos para limpar, criar ou atribuir valores as variáveis
+// before - Roda uma única vez antes de todos os casos de teste
+// after - Roda uma única vez depois de todos os casos de teste
+// beforeEach - Roda toda vez antes de rodar um caso de teste
+// afterEach - Roda toda vez que terminar um caso de teste
+
+
+// Stub: O stub é um simulador de comportamento de código. Ele é como um coringa.
+
+let artigo = `https://medium.com/trainingcenter/
+testes-unit%C3%A1rios-mocks-stubs-spies-e-todas-essas-palavras-dif%C3%ADceis-f2765ac87cc8`;
+
 import { expect } from 'chai';
 import { sum, sub, mult, div } from '../source/js/main';
 
